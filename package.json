@@ -1,0 +1,15 @@
+{
+  "name": "ava-power-assert-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ava": "uiureo/ava-power-assert#power-assert"
+  }
+}
