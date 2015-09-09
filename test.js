@@ -1,17 +1,52 @@
 var test = require('ava')
+var deepEqual = require('deep-equal')
 
-test(function (t) {
-  t.plan(1)
+// t.true(true)
+// t.is('foo', 'foo');
+// t.not('foo', 'bar');
+// t.same({a: 'a'}, {a: 'a'});
+// t.regexTest(/^abc$/, 'abc');
 
-  setTimeout(function () {
-    t.ok('bar' === 'bar')
-  }, 100)
+// t.ok(true)
+// t.ok('foo' === 'foo')
+// t.ok('foo' !== 'bar')
+// t.ok(deepEqual({a: 'a'}, {a: 'a'}))
+// t.ok(/^abc$/.test('ab'))
+
+test((t) => {
+  t.ok(true)
+
+  t.end()
 })
 
-test('fails', function (t) {
-  t.plan(1)
+test((t) => {
   var a = { name: 'foo' }
-  var b = { name: 'bar' }
 
-  t.ok(a.name === b.name)
+  // t.is(a.name, 'bar')
+  t.ok(a.name === 'bar')
+
+  t.end()
+})
+
+test((t) => {
+  var a = { name: 'foo' }
+
+  // t.not(a.name, 'foo')
+  t.ok(a.name !== 'foo')
+
+  t.end()
+})
+
+test((t) => {
+  var a = ['a', 'b']
+  var b = ['a', 'a']
+
+  t.ok(deepEqual(a, b))
+  t.end()
+})
+
+test((t) => {
+  var s = 'a'
+  t.ok(/^abc$/.test(`ab${ s }`))
+  t.end()
 })

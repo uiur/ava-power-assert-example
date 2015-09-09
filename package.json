@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ava": "uiureo/ava-power-assert#power-assert"
+    "ava": "uiureo/ava-power-assert#power-assert",
+    "deep-equal": "^1.0.1"
   }
 }
